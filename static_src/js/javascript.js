@@ -52,7 +52,7 @@ function setCityOptions() {
         cityName = city.split("-")[1]
         var el = document.createElement("option");
         el.textContent = cityName
-        el.value = cityCode;
+        el.value = cityCode + '|' + cityName;
         citySel.appendChild(el);
     }
 }
@@ -72,7 +72,7 @@ $(function() {
     $("#start_datepicker, #end_datepicker").datepicker({
         option: $.datepicker.regional["zh-HK"],
         dateFormat: "yy年mm月dd日",
-        minDate: new Date(2011, 0, 1),
+        minDate: new Date(2016, 2, 1),
         maxDate: new Date(),
         changeYear: true,
     });
