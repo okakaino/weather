@@ -2,6 +2,7 @@
 
 import json
 import re
+import time
 
 from datetime import datetime
 from dateutil import relativedelta, rrule
@@ -165,7 +166,6 @@ def fetch_html(city, year, month):
         'User-Agent': choice(user_agents),
     }
 
-    # http://tianqi.2345.com/t/wea_history/js/54511_20153.js
     url = 'http://tianqi.2345.com/t/wea_history/js/{year:04d}{month:02d}/{city}_{year:04d}{month:02d}.js'.format(
         year=year, city=city, month=month
     )
@@ -184,9 +184,11 @@ def fetch_html(city, year, month):
             return r.text
         else:
             logger.debug('http response {}, retrying'.format(r.status_code))
+            time.sleep(1)
             return fetch_html(city, year, month)
     except Exception as e:
         logger.debug('failed to send http request, {}, retrying'.format(e))
+        time.sleep(1)
         return fetch_html(city, year, month)
 
 def parse_weather(response):
