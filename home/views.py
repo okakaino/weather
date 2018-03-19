@@ -101,8 +101,6 @@ def index(request):
             logger.debug('got data for {} days'.format(len(weather_data)))
 
             filename = quote('{}{}-{}天氣'.format(city_name, start_date_str, end_date_str))
-            filename_extra = "; filename*=utf-8''{}".format(filename)
-            filename += filename_extra
             logger.debug('generating excel file {}'.format(filename))
                         
             return ExcelResponse(weather_data, output_filename=filename)

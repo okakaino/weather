@@ -8,7 +8,7 @@
     margin-right: 10px;
 }
 
-.hor-padding {
+.space-around {
     width: 100%;
-    margin: 0 15px;
+    margin: 25px 15px 0;
 }
