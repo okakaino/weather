@@ -136,7 +136,7 @@ $(function() {
         changeYear: true,
     });
 
-    $('#town').change(function() {
-        setTownOptions();
-    });
+    // $('#city').change(function() {
+    //     setTownOptions();
+    // });
 });
