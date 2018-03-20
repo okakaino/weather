@@ -26,7 +26,7 @@ from .user_agents import user_agents
 def index(request):
     if request.method == 'POST':
         logger.debug('got POST request from {}'.format(get_client_ip(request)))
-        city = request.POST.get('city', '')
+        city = request.POST.get('town', '')
         start_date_str = request.POST.get('start_date', '')
         end_date_str = request.POST.get('end_date', '')
         logger.debug('city: {}, start date: {}, end date: {}'.format(

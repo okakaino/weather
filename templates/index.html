@@ -27,12 +27,16 @@
                 </div>
                 {% endif %}
                 <div class="row mt-3">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <select class="form-control margin-10" id="province" onchange="setCityOptions()">
                         </select>
                     </div>
-                    <div class="col-md-6">
-                        <select class="form-control margin-10" id="city" name="city">
+                    <div class="col-md-4">
+                        <select class="form-control margin-10" id="city" onchange="setTownOptions()">
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-control margin-10" id="town" name="town">
                         </select>
                     </div>
                 </div>
