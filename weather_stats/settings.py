@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'django_weather',
         'USER': 'ted',
-        'PASSWORD': '234318876',
+        'PASSWORD': 'Abc123',
         'HOST': 'localhost',
         'PORT': '',
         # 'OPTIONS': {
