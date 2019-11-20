@@ -83,6 +83,15 @@ DATABASES = {
         'PASSWORD': '234318876',
         'HOST': 'localhost',
         'PORT': '',
+        # 'OPTIONS': {
+        #     'sql_mode': 'TRADITIONAL',
+        #     'charset': 'utf8',
+        #     'init_command': 'SET '
+        #     'default_storage_engine=INNODB,'
+        #     'character_set_connection=utf8,'
+        #     'collation_connection=utf8_bin,'
+        #     'SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED',
+        # }  # Now we have a mild degree of confidence :-)
     }
 }
 

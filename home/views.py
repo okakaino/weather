@@ -68,6 +68,7 @@ def index(request):
                     weather_str = fetch_html(city=city_code, year=year, month=month)
                     logger.debug('got http response javascript, saving to database')
                     new_weather, created = WeatherByMonth.objects.get_or_create(city_code=city_code, month=date_str)
+                    new_weather.city_name = city_name
                     new_weather.weather_str = weather_str
                     new_weather.save()
 
