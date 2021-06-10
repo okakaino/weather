@@ -1,6 +1,6 @@
 certifi==2018.1.18
 chardet==3.0.4
-Django==1.11.11
+Django==2.2.24
 django-excel-response==2.0.3
 et-xmlfile==1.0.1
 idna==2.6
